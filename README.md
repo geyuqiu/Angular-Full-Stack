@@ -21,6 +21,9 @@ Other tools and technologies used:
 1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
 2. Install Angular CLI: `npm i -g @angular/cli`
 3. From project root folder install all the dependencies: `npm i`
+4. install mongo
+5. create dir for mongo (/data/db is read-only since Catalina): `mkdir -p $HOME/data/db`
+
 
 ## Run
 ### Development mode
@@ -47,7 +50,7 @@ Run `ng test` to execute the frontend unit tests via [Karma](https://karma-runne
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Run `mongod` to run an instance of MongoDB then run `npm run testbe` to execute the backend tests via [Mocha](https://mochajs.org/).
+Run `mongod --dbpath=$HOME/data/db` to run an instance of MongoDB then run `npm run testbe` to execute the backend tests via [Mocha](https://mochajs.org/).
 
 ## Running linters
 Run `ng lint` to execute the frontend TS linting via [TSLint](https://github.com/palantir/tslint).

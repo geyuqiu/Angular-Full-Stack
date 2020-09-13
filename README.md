@@ -21,9 +21,7 @@ Other tools and technologies used:
 1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
 2. Install Angular CLI: `npm i -g @angular/cli`
 3. From project root folder install all the dependencies: `npm i`
-4. install mongo
-5. create dir for mongo (/data/db is read-only since Catalina): `mkdir -p $HOME/data/db`
-
+5. create dir for mongo (/data/db is read-only since Catalina, may want to set `$HOME first!) : `mkdir -p $HOME/data/db`
 
 ## Run
 ### Development mode
@@ -35,8 +33,9 @@ A window will automatically open at [localhost:4200](http://localhost:4200). Ang
 `npm run prod`: run the project with a production bundle and AOT compilation listening at [localhost:3000](http://localhost:3000) 
 
 ### Docker
-1. `docker-compose up`
-2. Go to [localhost:3000](http://localhost:3000)
+1. `mongod --dbpath=$HOME/data/db`
+2. `docker-compose up`
+3. Go to [localhost:3000](http://localhost:3000)
 
 ## Preview
 ![Preview](https://raw.githubusercontent.com/DavideViolante/Angular2-Full-Stack/master/demo.gif "Preview")
